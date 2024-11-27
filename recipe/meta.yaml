@@ -8,7 +8,7 @@ package:
 source:
   #git_url: https://github.com/BoldingBruggeman/getm-rewrite.git
   url: https://github.com/BoldingBruggeman/getm-rewrite/releases/download/v{{ version }}/code.tar.gz
-  sha256: b2cb4c47351851471de913ee99c4baa75acf3c11cfe25592f6e46fe017abacb5
+  sha256: be3a2dfad623413a4de89a71f98ea79086a1df3520687566fac08aec7a987bee
 
 build:
   number: {{ build }}
