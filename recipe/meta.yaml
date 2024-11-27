@@ -12,7 +12,7 @@ source:
 
 build:
   number: {{ build }}
-  skip: true  # [win]
+  #skip: True   # [win]
   entry_points:
     - pygetm-subdiv = pygetm.subdiv:main
     - pygetm-test-scaling = pygetm.parallel:test_scaling_command
@@ -29,6 +29,7 @@ requirements:
     - {{ compiler('c') }}                    # [not win] NB on windows this would activate Visual Studio and make that the default C/C++ compiler
     - {{ compiler('fortran') }}              # [not win]
     - {{ stdlib("c") }}                      # [not win] on Windows this pulls in VS and causes cmake to use its cl.exe, which is incompatible with the m2w64 version of windres.exe
+    - ninja                                  # [win]
     - {{ compiler('m2w64_c') }}              # [win]
     - {{ compiler('m2w64_fortran') }}        # [win]
     - {{ stdlib("m2w64_c") }}                # [win]
@@ -49,7 +50,7 @@ requirements:
     - awex
     - pygotm
     - mpi4py
-    - m2w64-gcc-libgfortran      # [win] NB m2w64-gcc-libs and m2w64-gcc-libs-core are added automatically by m2w64 compiler functions under build
+    #- m2w64-gcc-libgfortran      # [win] NB m2w64-gcc-libs and m2w64-gcc-libs-core are added automatically by m2w64 compiler functions under build
 
 
 test:
