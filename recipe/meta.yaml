@@ -40,7 +40,6 @@ requirements:
     - setuptools
     - numpy
     - libpython                  # [win]
-    - libgcc     # [osx and x86_64]   # to avoid overlinking error on intel mac
   run:
     - python
     - pyyaml
@@ -51,6 +50,7 @@ requirements:
     - awex
     - pygotm
     - mpi4py
+    - libgcc     # [osx and x86_64]   # to avoid overlinking error on intel mac
     #- m2w64-gcc-libgfortran      # [win] NB m2w64-gcc-libs and m2w64-gcc-libs-core are added automatically by m2w64 compiler functions under build
 
 
