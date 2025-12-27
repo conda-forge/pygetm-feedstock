@@ -40,6 +40,7 @@ requirements:
     - setuptools
     - numpy
     - libpython                  # [win]
+    - libgcc     # [osx and x86_64]   # to avoid overlinking error on intel mac
   run:
     - python
     - pyyaml
