@@ -1,5 +1,5 @@
-{% set version = "0.9.17" %}
-{% set build = 1 %}
+{% set version = "0.9.19" %}
+{% set build = 0 %}
 
 package:
   name: pygetm
@@ -8,7 +8,7 @@ package:
 source:
   #git_url: https://github.com/BoldingBruggeman/getm-rewrite.git
   url: https://github.com/BoldingBruggeman/getm-rewrite/releases/download/v{{ version }}/code.tar.gz
-  sha256: 47532baddb441c56e884074f8254d17aa603c2da9591dd66dbb6e718a9772939
+  sha256: 2f38b41109236a1dadb0c88db9b42b0a687642fe83879d2bc5ca1f6ea913ac54
 
 build:
   number: {{ build }}
@@ -50,6 +50,7 @@ requirements:
     - awex
     - pygotm
     - mpi4py
+    - libgcc     # [osx and x86_64]   # to avoid overlinking error on intel mac
     #- m2w64-gcc-libgfortran      # [win] NB m2w64-gcc-libs and m2w64-gcc-libs-core are added automatically by m2w64 compiler functions under build
 
 
