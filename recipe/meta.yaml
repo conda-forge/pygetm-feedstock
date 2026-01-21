@@ -60,6 +60,7 @@ test:
     - git
     - git-lfs
     - matplotlib-base
+    - cmocean
   imports:
     - pygetm
   commands:
