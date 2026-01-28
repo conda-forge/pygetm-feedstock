@@ -59,6 +59,8 @@ test:
     - scipy
     - git
     - git-lfs
+    - matplotlib-base
+    - cmocean
   imports:
     - pygetm
   commands:
