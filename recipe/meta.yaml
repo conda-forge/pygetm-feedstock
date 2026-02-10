@@ -1,4 +1,4 @@
-{% set version = "0.9.23" %}
+{% set version = "0.9.24" %}
 {% set build = 0 %}
 
 package:
@@ -8,7 +8,7 @@ package:
 source:
   #git_url: https://github.com/BoldingBruggeman/getm-rewrite.git
   url: https://github.com/BoldingBruggeman/getm-rewrite/releases/download/v{{ version }}/code.tar.gz
-  sha256: 1f07ffd04d290c78a2d610e6e74552ff11d5a51191eb20964043f8f145b8be27
+  sha256: dff951c323f58ea52492c8c36ca4e5d6609b49aec4203607f0c5783f85f966eb
 
 build:
   number: {{ build }}
