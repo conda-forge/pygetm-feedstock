@@ -1,5 +1,5 @@
 {% set version = "0.9.28" %}
-{% set build = 0 %}
+{% set build = 1 %}
 
 package:
   name: pygetm
@@ -27,12 +27,12 @@ requirements:
     - cmake
     - make                                   # [not win]
     - {{ compiler('c') }}                    # [not win] NB on windows this would activate Visual Studio and make that the default C/C++ compiler
-    - {{ compiler('fortran') }}              # [not win]
+    - {{ compiler("fortran") }}
     - {{ stdlib("c") }}                      # [not win] on Windows this pulls in VS and causes cmake to use its cl.exe, which is incompatible with the m2w64 version of windres.exe
     - ninja                                  # [win]
-    - {{ compiler('m2w64_c') }}              # [win]
-    - {{ compiler('m2w64_fortran') }}        # [win]
-    - {{ stdlib("m2w64_c") }}                # [win]
+    - {{ stdlib("c") }}
+    - {{ compiler("c") }}
+    - {{ compiler("fortran") }}
   host:
     - python {{ python }}
     - cython
@@ -51,7 +51,6 @@ requirements:
     - pygotm
     - mpi4py
     - libgcc     # [osx and x86_64]   # to avoid overlinking error on intel mac
-    #- m2w64-gcc-libgfortran      # [win] NB m2w64-gcc-libs and m2w64-gcc-libs-core are added automatically by m2w64 compiler functions under build
 
 
 test:
