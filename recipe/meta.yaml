@@ -32,7 +32,7 @@ requirements:
     - {{ compiler("c") }}
     - {{ compiler("fortran") }}
   host:
-    - python {{ python }}
+    - python
     - cython
     - pip
     - setuptools
